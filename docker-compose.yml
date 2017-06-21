@@ -1,0 +1,9 @@
+version: '3'
+services:
+  mongo:
+    image: mongo:latest
+  mongo-tools:
+    build: .
+    command: sleep infinity
+    volumes:
+      - ./backup/mongo-tools:/var/backup
